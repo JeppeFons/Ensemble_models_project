@@ -19,9 +19,11 @@ Tjek blandt andet filen requirements.txt
 docker build -t xgb-mlflow .
 
 **(alternativt) bygger image uden cache:**
+
 docker build --no-cache -t xgb-mlflow .
 
 **kører containeren**
+
 docker run --rm `
   -v C:\Job_og_eksamensbevis\Github\projekter\ML_ensemble_modeller_projekt-main\mlruns:/app/mlruns `
   -v C:\Job_og_eksamensbevis\Github\projekter\ML_ensemble_modeller_projekt-main\creditcard.csv:/app/creditcard.csv `
