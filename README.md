@@ -37,6 +37,6 @@ mlflow ui --backend-store-uri file:///C:/Job_og_eksamensbevis/Github/projekter/M
 
 ### Forklaring af datasæt og kilde.
 
-
+**datasættet kan hentes på kaggle:** https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 ### Resultater og konklusioner.
