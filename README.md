@@ -14,23 +14,21 @@ Tjek blandt andet filen requirements.txt
 
 **nedenstående skal køres i powershell, for at få containeren op at køre med ML-modellen.**
 
-
 **bygger et image:** 
+
 docker build -t xgb-mlflow .
 
+**(alternativt) bygger image uden cache:**
 docker build --no-cache -t xgb-mlflow .
 
+**kører containeren**
 docker run --rm `
   -v C:\Job_og_eksamensbevis\Github\projekter\ML_ensemble_modeller_projekt-main\mlruns:/app/mlruns `
   -v C:\Job_og_eksamensbevis\Github\projekter\ML_ensemble_modeller_projekt-main\creditcard.csv:/app/creditcard.csv `
   -e MLFLOW_TRACKING_URI="file:///app/mlruns" `
   xgb-mlflow
 
-**Hvis du kun vil genkøre træningen:**
-
-**tjek MLflow UI på:**
-
-først kør nedenstående i powershell:
+**starter mlflow ui (indsæt egen sti til mlruns-mappen. Jeg ved godt dette ikke er best practice):**
 
 mlflow ui --backend-store-uri file:///C:/Job_og_eksamensbevis/Github/projekter/ML_ensemble_modeller_projekt-main/mlruns
 
