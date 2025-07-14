@@ -12,4 +12,3 @@ RUN apt-get update && \
 COPY . .
 
 CMD ["python", "XGBoost_1.py"]
-

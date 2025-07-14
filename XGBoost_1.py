@@ -45,4 +45,3 @@ with mlflow.start_run():
     mlflow.xgboost.log_model(model, "model", input_example=input_example)
 
     print(f"Accuracy: {acc:.4f}")
-
